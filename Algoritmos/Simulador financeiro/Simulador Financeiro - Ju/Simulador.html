@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon"/>
+    <title>7Solutions</title>
+</head>
+<body>
+    <div style="margin-left: 27%;">
+        <img src="imagens/logoSeven.png" alt="" style="width: 200px; float: left;">
+        <h1 style="float: left; font-size: 400%;"><span style="color: #0ca4b8;">7</span>Solutions</h1>
+    </div>
+    <div class="simulador" style="display: none;" id="simulador">
+        <h4>Simulador Financeiro</h4>
+        <p>
+            <label for="silos">Silos:</label><br>
+            <input id="silos" type="text" class="entrada" placeholder="Quantidade de silos"><br>
+        </p>
+        <p>
+            <label for="tempo">Tempo de utilização:</label><br>
+            <input id="tempo" type="text" class="entrada" placeholder="Meses de uso"><br>
+        </p>
+        <button onclick="calcular()">Calcular orçamento</button>
+    </div>
+    <div id="conteudo" style="display: none">
+        <h4>Parcelas</h4>
+        <div id="resultado"></div><br>
+        <button onclick="fechar()">fechar</button>
+    </div>
+    <div class="botaozinho" onclick="abrefecha()">
+        calculadora
+    </div>
+</body>
+</html>
+<script>
+    var aberto = 0;
+    var resul = 0
+    function calcular(){
+        var silo = Number(silos.value) * 400;
+        var meses = Number(tempo.value) * 1800;
+        var taxa = silo + meses;
+        var orcamento = "";
+        for (var parcela = 1; parcela <= 12; parcela++){
+            orcamento += `${parcela}x sem juros <b>R$: ${Number(taxa / parcela).toFixed(2)}</b><br>`;
+        }
+        if(resul == 0){
+            conteudo.classList.add("abertor");
+            conteudo.classList.remove("fechador");
+            conteudo.style.display = "block"
+            setTimeout(function(){ resul = 1; }, 1000);
+        }
+        resultado.innerHTML = orcamento;
+    }
+    function abrefecha(){
+        if(aberto == 0){
+            simulador.classList.add("aberto");
+            simulador.classList.remove("fechado");
+            simulador.style.display = "block"
+            setTimeout(function(){ aberto = 1; }, 1000);
+        }
+        else if(aberto == 1){
+            simulador.classList.add("fechado");
+            simulador.classList.remove("aberto");
+            setTimeout(function(){ simulador.style.display = "none"; aberto = 0; }, 1000);            
+        }
+    }
+    function fechar(){
+        if(resul == 1){
+            conteudo.classList.add("fechador");
+            conteudo.classList.remove("abertor");
+            setTimeout(function(){ resul = 0; conteudo.style.display = "none"}, 1000);
+        }
+    }
+</script>

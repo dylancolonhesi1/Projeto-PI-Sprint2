@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financeiro</title>
+    <link rel="stylesheet" href="financeiro.css"> 
+</head>
+<body>
+    <div class= "barra1"> ' </div>
+    <h2 class="header"> Simulador financeiro <b style="color:rgb(243, 69, 69)"> 7Solutions</b> <h2>
+    <div class= "imagem2">   <img src="https://static.thenounproject.com/png/3266127-200.png"; style="height:30px; "></div>
+    <div class= "inputs">
+       Quantos sensores você pretende adquirir? <input id="qtdSensores" type="text" placeholder="Média de Alcance: 20m">
+        <br><br>
+        <button onclick="info()" style="background-color:red; color:white">Calcular</button>
+
+    </div>
+    <div class="kits" id="kits"> </div>
+    <div class="mostracalculo" id="mostracalculo"> </div>
+
+</body>
+</html>
+
+<script>
+function info(){
+    kits.innerHTML = `O nosso kit completo contém:<br> Todos os equipamentos já  <b style="color:red">montados e programados</b>;
+    <br>acesso à area de <b style="color:red">monitoramento</b> no site da 7Solutions;<br>
+    <b style="color:red">manutenção </b> mensal dos equipamentos. 
+    <div class= "imagem1">   <img src="https://raw.githubusercontent.com/GuilhermeMiranda1/ProjetoPi/master/Imagens/Logo%20de%20negócio/AAAA.png"; style="height:500px"; alt="logo empresa"> </div>`
+    
+    var valorSensor = 17;
+    var valorProtoboard = 123;
+    var valorInstalacao= 2000;
+    var valorManutencao= 2400;
+    var calculo = Number(qtdSensores.value) *(Number(valorSensor) + Number(valorProtoboard) + Number(valorInstalacao) + Number(valorManutencao)) ;
+
+    
+    mostracalculo.innerHTML = `O valor <u>aproximado</u> que você pagará será de <b style="color:green">R$ </b> ${calculo}<b style="color:red">*</b>
+     <br> <b style="color:red; font-size:10px">*a manutenção será feita mensalmente com o valor de 200 reais, <br>acima é mostrado o valor dessa manutenção em 12 meses.</b>
+            <br> <br> <br> <br>  Em 2017 cerca de 15% da produção total de grãos foi <b style="color:red">perdida</b> por<br> falta de estrutura adequada de armazenamento, venha trabalhar conosco
+            <div class= "barra2"> ' </div>`
+
+}
+</script>

@@ -1,0 +1,29 @@
+estudo para apresentação banco de dados
+
+chave estrangeira = quando vc torna tabelas relacionais 
+
+table usuario relaciona com administrador 
+
+um usuário pertence ao adm
+
+auto_increment serve para toda vez q vc fizer o insert conta do 1 até o limite
+
+-----------------------
+ o adm serve para dar permissão para dominio de ferramentas do site !!
+usuario que só ''olha'' .
+
+timestamp captura a data e a hora da inserção do dado.
+
+references, referencia a outra tabela 'puxa os dados da outra tabela'
+
+caso apagar, segue a ordem da referencia, no caso, apagar primeiro usuario e depois o admin.
+
+
+
+
+for é um contador, vc precisa indicar a variavel que precisa ser contada
+voce precisa determinar um limite
+criou a parcela 1
+; então ++ (soma) na parcela
+
+soma até o numero 12

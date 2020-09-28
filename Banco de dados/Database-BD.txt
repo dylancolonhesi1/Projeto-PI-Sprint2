@@ -1,0 +1,87 @@
+create database Seve_Solutions;
+
+
+use Seven_Solutions;
+
+
+-- Criando as tabelas
+create table if not exists administrador(
+
+id_admin int primary key auto_increment,
+
+nome_admin varchar(50),
+
+email_admin varchar(50),
+
+senha_admin varchar(30));
+
+
+--        --          --        --        
+--
+
+create table if not exists usuario(
+
+id_usuario int primary key auto_increment,
+
+nome_usuario varchar(50),
+
+email_usuario varchar(50),
+
+senha_usuario varchar(30),
+
+fk_admin int,
+foreign key(fk_admin) references administrador(id_admin));
+
+--        --          --        --        
+--
+
+create table if not exists sensor(
+
+id_sensor int primary key,
+
+tipo_sensor char(1));
+
+--        --         --         --       
+--
+create table if not exists temperatura(
+
+data_temperatura timestamp,
+registro_temp varchar(5),
+fk_sensor int not null,
+
+foreign key (fk_sensor) references sensor(id_sensor));
+
+
+
+-- inserindo dados na tabela administrador
+
+insert into administrador values(
+
+01,'Samuel Lopes','lopes.16.samuel@gmail.com','samuel123');
+
+-- Conferindo dados inseridos
+
+select * from administrador;
+
+-- inserindo dados na tabela usuario
+insert into usuario values(
+
+01,'Roberto Alves','roberto.alves@gmail.com','roberto123',01),
+
+(0,'Angelo Silva','angelo.silva@gmail.com','angelo123',01);
+
+-- Conferindo dados inseridos
+select * from usuario;
+
+-- inserindo dados na tabela sensor
+
+insert into sensor values(01,'T');
+
+-- Conferindo os dados inseridos
+select * from sensor;
+
+-- inserindo dados na tabela temperatura
+insert into temperatura values('2020-09-20','03.02','01');
+
+-- conferindo dados na tabela teperatura
+select * from temperatura;

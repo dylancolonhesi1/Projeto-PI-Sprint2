@@ -1,0 +1,97 @@
+body{
+   background-image: url("../imagens/fundoSimulador.jpg");
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*.sideBar{
+
+}*/
+
+
+.menu{
+    width: 100%;
+    float: left;
+}
+.header{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    color:black;
+    float: left;
+    text-align: justify;
+    width: 30%;
+    margin-left: 27%;
+}
+.logo{
+    float: left;
+    width: 10%;
+}
+.card1{
+    float: left;
+    margin-left: 20%;
+    text-align: center;
+    /*padding-left: 15px;*/
+    padding-top: 20px;
+    padding-bottom: 50px;
+    width: 60%;
+    font-size: 25px;
+    height: auto;
+    margin-top: 40px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.74);
+}
+
+.card2{
+    float: left;
+    margin-left: 20%;
+    text-align: center;
+    /*padding-left: 15px;*/
+    padding-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-justify: auto;
+    width: 60%;
+    font-size: 21px;
+    height: 210px;
+    margin-top: 50px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.74);
+}
+.insira{
+    padding: 5px;
+    background-color: #92c792;
+    transition: 0.5s;
+    border-radius: 10px;
+    
+}
+.insira:focus{
+    padding: 9px;
+    background-color: #68b168;
+    color: wheat;
+}
+/* :focus é utilizado pra mudar as propriedades quando o objeto está selecionado/em foco */
+.botao{
+    padding: 7px;
+    font: bold;
+    text-transform: uppercase;
+    border: 0;
+    background-color: #c8e950;
+    border-radius: 9px;
+    transition: 0.3s;
+}
+/* :hover é utilizado pra mudar as propriedades quando o mouse passa por cima do objeto */
+.botao:hover{
+    padding: 10px;
+    background-color: #ccf730;
+    color: darkslategray;
+}
+.regra{
+    width: 80%;
+    margin-left: 10%;
+    text-align: justify;
+}
+.regra h3{
+    text-align: center;
+}

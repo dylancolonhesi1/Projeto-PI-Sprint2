@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Simulador financeiro</title>
+</head>
+<body>
+    <div class="header">
+        <img src="imagens/logoSeven.png" alt="Seven Solutions logo" width="100px">
+        <h3>Seven Solutions</h2>
+    </div>
+    <div class="card1">
+        <h3>Orçamento:</h3>
+       Insira a quantidade de silos: <br>
+       <input id="silo_qtd" type="text" placeholder="Quantidade de silos"><br>
+       Insira o período de uso: <br>
+       <input id="mes_uso" type="text" placeholder="Período de utilização"><br>
+       <button onclick="simular()">Simular orçamento</button><br>
+       <div id="Resultado"></div>
+       <div id="parcelamento" style="color: rgb(14, 3, 3); font-size: 19px"></div>
+    </div>
+    <div class="card2">
+        <h3>Regra de négocio:</h3>
+        O preço por silo é fixo 400R$. O preço por mês é de 1800R$.
+        Parcelamento disponível até 12x, o preço do silo é somado com o mês, chegando no total.
+    </div>
+</body>
+</html>
+<script>
+    function simular(){
+        var silo = Number(silo_qtd.value * 400);
+        var meses = Number(mes_uso.value * 1800);
+        var taxa_ass = Number(silo + meses);
+        parcelamento.innerHTML = '';
+        Resultado.innerHTML = `<span style="color: red; font-size: 18px"><u>Total R$: ${taxa_ass.toFixed(2)}</u><br></span>
+            <span style="font-size: 18px">Parcelamento até 12x:</span>`;
+
+        for (var parcela = 1; parcela <= 12; parcela++) {
+            parcelamento.innerHTML += `${parcela}x sem juros R$: ${Number(taxa_ass / parcela).toFixed(2)}<br>`;
+        }
+    }
+</script>

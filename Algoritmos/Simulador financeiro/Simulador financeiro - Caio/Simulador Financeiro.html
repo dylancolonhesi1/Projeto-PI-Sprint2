@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro</title>
+</head>
+<body>
+    <div style="background-color: rgba(181, 204, 53, 0.342); width:650px">
+    <h2><i>Seven Solutions</i></h2>
+    <h3>Simule aqui o valor dos preços dos kits que você precisa!</h3>
+    <h3>Informe a quantidade de kits:<input id="kit" type="text"> <br></h3>
+    <button onclick="calcular()">Descubra o valor</button><br> 
+    <div id="div_mens"></div> <br>
+</body>
+</html>
+<script>
+    function calcular() {
+        var multiplicação = (Number(kit.value) * Number (599,90));
+div_mens.innerHTML = `O preço de ${kit.value} kits será de: <i style="color:green">R$</i> ${multiplicação},00. <br> <br>
+<b>OBS:</b> Cada kit custa <i style="color:green">R$</i> 599,90 (Já com todos os acessórios necessários para o funcionamento). <br> <br>
+ Para saber valores sobre mão de obra e planos mensais/anuais entre em contato.`;
+
+    }
+</script>

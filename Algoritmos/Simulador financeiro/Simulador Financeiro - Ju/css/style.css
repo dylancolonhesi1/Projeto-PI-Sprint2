@@ -1,0 +1,115 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("../imagens/fundoSimulador.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+ }
+#conteudo{
+    position: fixed;
+    width: 20%;
+    margin-left: -3%;
+    background-color: #a9c574;
+    border: #638f12 3px solid;
+    padding-left: 5%;
+    padding-bottom: 30px;
+    margin-top: 10%;
+    border-radius: 15px;
+}
+#conteudo button{
+    border-radius: 5px;
+    border: #e9e16e 2px solid;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 6px;
+    text-transform: uppercase;
+    background-color: #8ab43d;
+    color: white;
+    transition: 0.5s;
+}
+#conteudo button:hover{
+    color: black;
+    background-color: #e9e16e;
+    border: #8ab43d 2px solid;
+}
+.simulador{
+    position: fixed;
+    width: 30%;
+    margin-left: 70%;
+    background-color: #a9c574;
+    border: #638f12 3px solid;
+    padding-left: 5%;
+    padding-bottom: 30px;
+    margin-top: 10%;
+    border-radius: 15px;
+}
+.simulador h4{
+    margin-left: 10%;
+}
+.simulador button{
+    border-radius: 5px;
+    border: #e9e16e 2px solid;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 6px;
+    text-transform: uppercase;
+    margin-left: 8%;
+    background-color: #8ab43d;
+    color: white;
+    transition: 0.5s;
+}
+.simulador button:hover{
+    color: black;
+    background-color: #e9e16e;
+    border: #8ab43d 2px solid;
+}
+.entrada{
+    padding: 4px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.entrada:focus{
+    background-color: #e9e16e;
+}
+.aberto{
+    animation-name: abre;
+    animation-duration: 1s;
+}
+@keyframes abre{
+    from{margin-left: 100%;}
+    to{margin-left: 70%;}
+}
+.fechado{
+    animation-name: fecha;
+    animation-duration: 1s;
+}
+@keyframes fecha{
+    from{margin-left: 70%;}
+    to{margin-left: 100%;}
+}
+.abertor{
+    animation-name: abrer;
+    animation-duration: 1s;
+}
+@keyframes abrer{
+    from{margin-left: -70%;}
+    to{margin-left: -3%;}
+}
+.fechador{
+    animation-name: fechar;
+    animation-duration: 1s;
+}
+@keyframes fechar{
+    from{margin-left: -3%;}
+    to{margin-left: -70%;}
+}
+.botaozinho{
+    cursor: pointer;
+    position: fixed;
+    width: 7%;
+    background-color: #8ab43d;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-top: 44.4%;
+    margin-left: 90%;
+}
