@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Solutions</title>
+    
+    
+    <link rel="stylesheet" href="sec_style.css">
+
+
+
+</head>
+<body > 
+    
+
+<!-- CABEÇALHO OU HEADER -->
+
+    <div class="header">
+        <div class="container">
+     <div class="title-header">
+         <h1> <span>7</span> Solutions</h1>
+       
+         
+         
+
+    </div>
+
+    <div class="nav">
+        <!-- UTILIZAMOS <ul> lista <il> itens da lista -->
+            <ul>
+              <li><a href="inicio.html">Inicio</a></li>
+              <li class="menu_atual"><a href="login_cadastro.html">Login/Cadastro</a></li>
+              <li><a href="compre.html">Compre</a></li>
+              <li><a href="contato.html">Contato</a></li>
+
+            </ul>
+
+             </div>
+         </div>
+    </div> 
+
+
+    <div class="loginecadastro">
+        <img class="logo" src="logo.png" alt="Seven Solutions logo" width="100px">
+        <div class="header3">
+            <h2 style="text-align: center"> 7 Solutions</h2>
+        </div>
+    </div>
+
+
+    <div class="card1">
+        <h3>Realize seu login:</h3>
+       Email: <br>
+       <input id="email1" type="text" class="insira" placeholder="exemplo@gmail.com.br"><br>
+       <br>
+       Senha: <br>
+       <input id="senha2" type="text" class="insira" placeholder="senha123SENHA"><br>
+       <br>
+       <button onclick="Entrar()" class="botao">Logar</button><br>
+      
+    </div>
+</div>            
+
+
+
+
+<div class="card2">
+    <h3>Realize seu Cadastro:</h3>
+   Insira seu nome: <br>
+   <input id="nome1" type="text" class="insira" placeholder="Dylan Colonhesi"><br>
+   <br>
+   Insira seu emil: <br>
+   <input id="email2" type="text" class="insira" placeholder="exemplo@gmail.com.br"><br>
+   <br>
+   Insira sua senha: <br>
+   <input id="senha3" type="text" class="insira" placeholder="senha123SENHA"><br>
+   <br>
+   <button onclick="cadastrar()" class="botao">Cadastrar</button><br>
+   
+</div>
+
+
+</body>
+</html>
+
+
+<script>
+  function Entrar () {
+    if (email1.value == 0) {
+        alert ("Insira seu email"); 
+        } else if (senha2.value == 0) {
+            alert ("Insira sua senha");         
+                } else {
+                    alert ("Login realizado com sucesso");                     
+                }               
+        }  
+  
+  
+  
+  
+  function cadastrar () {
+    if (nome1.value == 0) {
+        alert ("Insira seu nome"); 
+        } else if (email2.value == 0) {
+            alert ("Insira seu email"); 
+
+        } else if (senha3.value == 0) {
+            alert ("Insira sua senha");
+
+        } else {
+        alert ("Cadastro realizado com sucesso");                     
+                }               
+        }  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+</script>
+
+
+
+   

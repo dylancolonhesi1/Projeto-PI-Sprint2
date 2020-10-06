@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Solutions</title>
+    
+    
+    <link rel="stylesheet" href="quart_style.css">
+
+
+
+</head>
+<body > 
+    
+
+<!-- CABEÇALHO OU HEADER -->
+
+    <div class="header">
+        <div class="container">
+     <div class="title-header">
+         <h1> <span>7</span> Solutions</h1>
+       
+         
+         
+
+    </div>
+
+    <div class="nav">
+        <!-- UTILIZAMOS <ul> lista <il> itens da lista -->
+            <ul>
+              <li><a href="inicio.html">Inicio</a></li>
+              <li><a href="login_cadastro.html">Login/Cadastro</a></li>
+              <li><a href="compre.html">Compre</a></li>
+              <li class="menu_atual"><a href="contato.html">Contato</a></li>
+
+            </ul>
+
+             </div>
+         </div>
+    </div> 
+
+
+
+    <div class="compreagora">
+        <div class="header5">
+            <h2 style="margin-left: -60px;"> 7 Solutions</h2>
+        </div>
+    </div>
+
+    <div class="card2">
+    <h3>Entre em contato</h3>
+   Insira seu nome: <br>
+   <input id="nome1" type="text" class="insira" placeholder="Dylan Colonhesi" style="width: 200px;"><br>
+   <br>
+   Insira seu email:  <br>
+   <input id="email2" type="text" class="insira" placeholder="exemplo@gmail.com.br" style="width: 200px;"><br>
+   <br>
+   Mensagem:  <br>
+   <input id="mensagem" type="text" class="insira" placeholder="Digite sua mensagem" style="width: 500px; height: 200px;"><br>
+   <br>
+   <button onclick="contato()" class="botao">Enviar</button><br>
+   
+</div>
+
+
+</body>
+</html>
+
+<script>
+    function contato () {
+      if (nome1.value == 0) {
+          alert ("Insira seu nome"); 
+          } else if (email2.value == 0) {
+              alert ("Insira sua email");  
+            } else if (mensagem.value == 0) {
+              alert ("Digite sua mensagem!");  
+                } else {
+                      alert ("Mensagem enviada com sucesso!!");                     
+                  }               
+          }
+
+
+</script>  

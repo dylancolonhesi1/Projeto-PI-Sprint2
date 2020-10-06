@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Solutions</title>
+    
+    
+    <link rel="stylesheet" href="terc_style.css">
+
+
+
+</head>
+<body > 
+    
+
+<!-- CABEÇALHO OU HEADER -->
+
+    <div class="header">
+        <div class="container">
+     <div class="title-header">
+         <h1> <span>7</span> Solutions</h1>
+       
+         
+         
+
+    </div>
+
+    <div class="nav">
+        <!-- UTILIZAMOS <ul> lista <il> itens da lista -->
+            <ul>
+              <li><a href="inicio.html">Inicio</a></li>
+              <li><a href="login_cadastro.html">Login/Cadastro</a></li>
+              <li class="menu_atual"><a href="compre.html">Compre</a></li>
+              <li><a href="contato.html">Contato</a></li>
+
+            </ul>
+
+             </div>
+         </div>
+    </div> 
+
+
+    <div class="simulador_financeiro">
+        <img class="logo" src="logo.png" alt="Seven Solutions logo" width="100px">
+        <div class="header4">
+            <h2 style="text-align: center"> 7 Solutions</h2>
+        </div>
+    </div>
+
+
+    <div class="card1">
+        <h3>Orçamento:</h3>
+       Insira a quantidade de silos: <br>
+       <input id="silo_qtd" type="text" class="insira" placeholder="Quantidade de silos"><br>
+       <br>
+       Insira o período de uso: <br>
+       <input id="mes_uso" type="text" class="insira" placeholder="Período de utilização"><br>
+       <br>
+       <button onclick="simular()" class="botao">Simular orçamento</button><br>
+       <div id="Resultado"></div>
+       <div id="parcelamento" style="color: rgb(14, 3, 3); font-size: 18px"></div>
+       <div id="lucro" style="color: rgb(235, 6, 6); font-size: 18px; text-justify: auto"></div>
+    </div>
+    <div class="card2">
+        <div class="regra">
+            <h3>Obs:</h3>
+            Parcelamento disponível até 12x. Para mais informações entre em contato.
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function simular(){
+        var silo = Number(silo_qtd.value * 400);
+        var meses = Number(mes_uso.value * 1800);
+        var taxa_ass = Number(silo + meses);
+
+        Resultado.innerHTML = `<span style="color: red; font-size: 18px"><u>Total R$: ${taxa_ass.toFixed(2)}</u><br></span>
+            <span style="font-size: 18px">Parcelamento até 12x:</span>`;
+
+        // Parcelamento em 12x, de uma forma mais simplificada
+        parcelamento.innerHTML = `
+        1x sem juros R$:${Number(taxa_ass / 1).toFixed(2)}<br>
+        2x sem juros R$:${Number(taxa_ass / 2).toFixed(2)}<br>
+        3x sem juros R$:${Number(taxa_ass / 3).toFixed(2)}<br>
+        4x sem juros R$:${Number(taxa_ass / 4).toFixed(2)}<br>
+        5x sem juros R$:${Number(taxa_ass / 5).toFixed(2)}<br>
+        6x sem juros R$:${Number(taxa_ass / 6).toFixed(2)}<br>
+        7x sem juros R$:${Number(taxa_ass / 7).toFixed(2)}<br>
+        8x sem juros R$:${Number(taxa_ass / 8).toFixed(2)}<br>
+        9x sem juros R$:${Number(taxa_ass / 9).toFixed(2)}<br>
+        10x sem juros R$:${Number(taxa_ass / 10).toFixed(2)}<br>
+        11x sem juros R$:${Number(taxa_ass / 11).toFixed(2)}<br>
+        12x sem juros R$:${Number(taxa_ass / 12).toFixed(2)}<br><br>`;
+
+        lucro.innerHTML = `<b style="text-align: center">Contratando nossos serviços a estimativa de lucro pode chegar até 5% em cima do valor de 1 tolenada de grãos, oferencendo maior qualidade no seu produto.<br>
+        E ter a melhor qualidade do grão!<b>`;
+        
+        // for (var parcela = 1; parcela <= 12; parcela++) {
+        //     parcelamento.innerHTML += `${parcela}x sem juros R$: ${Number(taxa_ass / parcela).toFixed(2)}<br>`;
+        // }
+    }
+</script>
+
+
