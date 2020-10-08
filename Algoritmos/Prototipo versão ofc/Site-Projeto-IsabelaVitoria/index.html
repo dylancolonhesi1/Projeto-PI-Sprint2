@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="imagem/png" href="img/logoSeven.png" />
+    <title>7Solutions</title>
+</head>
+<body>
+<header>
+  <!-- Menu -->
+        <div class="logo" id="home"></div>
+       <nav>
+           <ul>
+               <li><a href="#projeto">Projeto</a></li>
+               <li><a href="#empresa">Empresa</a></li>
+               <li><a href="#contato">Contato</a></li>
+               <li><a href="html/acesso.html">Cadastrar</a></li>
+           </ul>
+       </nav>
+</header>
+<!-- Imagem principal/inicio -->
+    <div class="Banner-image">
+        <div class="Acesso-text">
+          <h1>Frase de Efeito</h1>
+          <p>7 Solutions</p><br>
+          <a href="html/acesso.html"><button class="btn-Acessar">Acesse seu Login</button></a>
+        </div>
+      </div >
+<!-- Pauta sobre a empresa -->
+      <div class="empresa-cont"id="empresa">
+          <div class="container">
+        <h2>Empresa</h2>
+         <br><p> Somos A empresa que encontrou a solução para seus problemas de controle e temperatura com silos,Entre em contato com nosco,
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, inventore. Delectus alias similique tenetur possimus dignissimos perspiciatis excepturi optio. 
+            Labore eligendi quae cupiditate, ut quam soluta molestiae minima neque voluptatibus.
+             Para tirar suas duvidas ou contratar nossos serviços, que são bons 
+         </p>
+        <br><a href="html/Empresa.html"> <button class="btn-Acessar">Saber mais</button></a>
+        
+          </div>
+      </div>
+<!-- Pauta sobre o projeto -->
+      <div id="projeto" class="projeto-cont">
+          <div class="container">
+            <h2>Projeto</h2>
+           <br><p>São sensores, que captam a temperatura e umidade do silo e enviam para um sistema que é visto em tempo real pelo cliente, isso permite com que as informações climáticas do local sejam adquiridas com facilidade e lidas até por quem não tem conhecimento do assunto, assim favorecendo a manutenção do silo e a preservação do que está armazenado.  </p>
+            <br><a href="html/Projeto.html"><button class="btn-Acessar">Saber mais</button></a><br>
+            <br><a href="html/Projeto.html#orçamento"><button class="btn-Acessar">Calcular Orçamento</button></a>
+          </div>
+      </div>
+<!-- Formulario de contato -->
+      <div id="contato" class="contato">
+        <div class="container">
+          <h2 class="titulo">Contate-nos</h2></div>
+          <div class="Pcontato">
+              <form>
+                  <label for="nomeSobrenome">Nome:</label>
+                  <input type="text" id="nomeSobrenome" placeholder="Nome completo" class="input_padronizado" required>
+  
+                  <label for="nomeEmpresa">Nome da Empresa:</label>
+                  <input type="text" id="nomeEmpresa" placeholder="Nome Empresa" class="input_padronizado" required>
+
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" class="input_padronizado" required placeholder="nome@email.com">
+  
+                  <label for="telefoneContato">Telefone:</label>
+                  <input type="tel" id="telefoneContato" class="input_padronizado" required placeholder="Ex: (00) 00000-0000">
+
+                  <label for="assunto">Assunto:</label>
+                  <input type="text" id="assunto" maxlength="70" class="input_padronizado">
+
+                  <label for="mensagem">Mensagem:</label>
+                  <textarea type="text" id="mensagem" rows="9" oninput="digitar()" class="input_padronizado" maxlength="500" data-ls-module="charCounter"></textarea>
+                 <br><b id="restantes">500</b> caracteres restantes
+                  <div>
+                      <p>Como prefere o contato?</p>
+  
+                      <label for="email-radio">
+                          <input type="radio" id="email-radio" name="contato" checked>Email
+                      </label>
+  
+                      <label for="telefone-radio">
+                          <input type="radio" id="telefone-radio" name="contato">Telefone
+                      </label>
+                  </div>
+                  <button onclick="enviar_form()" class="btn-Acessar">Enviar</button>
+              </form>
+          </div>
+          </div>
+          <!-- Botão pra subir pro topo -->
+      <a href="#home">
+          <button id="subirTopo"> 
+        ^ <br> Subir
+          </button>
+      </a>
+      <!-- Rodapé -->
+      <footer>
+       <div class="container-rodape">
+       <p><b>Endereço:</b> Rua Haddock Lobo, 595</p>
+       <p>Cerqueira César, São Paulo - SP</p>
+       <p>01414-001</p>
+       <p><b>Email:</b>Exemplor@gmail.com</p>
+        <p><b>Telefone:</b> (11) 2384-0732</p> 
+      </div>
+      <div class="rede-social">
+        <a href="facebook.com.br"><img src="img/facebook.png" alt="Icone facebook"></a>
+        <a href="instagram.com.br"><img src="img/instagram.png" alt="Icone instagram"></a>
+        <a href="github.com.br"><img src="img/github-logo.png" alt="Icone github"></a>
+      </div>
+      <a href="Exemplo">Copyright © 2020 | Isabela Vitoria | 7Solutions.</a>
+      </footer>
+      
+</body>
+</html>
+<script>
+  /* Validação de formulario */
+  function enviar_form(){
+    let erros = [];
+    if (!nomeSobrenome.value) {
+        erros.push("Preencha o nome");
+    }
+    if (!nomeEmpresa.value) {
+        erros.push("Preencha o nome da empresa");
+    }
+    if (!assunto.value) {
+        erros.push("Preencha o assunto");
+    }
+    if ((email.value.search("@") == -1) ||
+       (email.value.search(".") == -1) ||
+       (email.value.search(" ") >= 1)) {
+          erros.push("Formato de E-mail inválido")   
+    }
+    if (!mensagem.value) {
+        erros.push("Preencha o campo de mensagem");
+    }
+    return erros;
+    alert("sua mensagem foi enviada");
+}
+/* Contagem de palavras do formulario */
+function digitar() {
+    let quantidade = mensagem.value.length;
+    let restante = 500 - quantidade;
+    restantes.innerHTML = restante;
+}
+</script>

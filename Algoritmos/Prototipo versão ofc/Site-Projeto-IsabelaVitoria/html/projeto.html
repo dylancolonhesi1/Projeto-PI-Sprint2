@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-simulador.css">
+    <link rel="icon" type="imagem/png" href="../img/logoSeven.png" />
+    <title>7Solutions</title>
+</head>
+<body>
+    <!-- Menu -->
+<header>
+        <div class="logo" id="home"></div>
+       <nav>
+           <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/projeto.html">Projeto</a></li>
+            <li><a href="../html/Empresa.html">Empresa</a></li>
+            <li><a href="#orçamento">Orçamento</a></li>
+            <li><a href="#contato">Contato</a></li>
+           </ul>
+       </nav>
+</header>
+<!-- Começo sobre o projeto -->
+<div class="Projeto" id="projeto">
+    <div class="conteiner-projeto">
+        <h2>Projeto</h2><br>
+        <p> Uma pequena pauta Aqui Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi nihil debitis culpa suscipit quo.
+             Rerum, molestiae ut! Enim veritatis est expedita, cumque amet aliquid ratione quo, voluptate minus, fuga voluptates?Eaque,
+              quod quam labore blanditiis, dolorum nihil officiis ratione iste accusantium aliquid mollitia nostrum quos aperiam similique
+            in quibusdam aliquam. Minima nemo suscipit veritatis quis. Nesciunt repellat esse deserunt quam.</p>
+    </div>
+</div>
+<!-- Mais A fundo sobre o projeto -->
+<div class="Sobre-projeto">
+    <div class="container-Sobre">
+    <div class="sobre-1">
+        <h2>O que é armazenagem de grãos e qual é a sua importância?</h2><br>
+        <p>A armazenagem de grãos é o processo de guardar os grãos produzidos, com o intuito de preservar suas qualidades físicas e químicas desde a colheita até o abastecimento.
+            O armazenamento envolve diversos processos, tais como: limpeza, secagem, tratamento fitossanitário, transporte, classificação, entre outros.
+            Sendo assim, o armazenamento adequado de grãos permite a produção e comercialização fora de sua sazonalidade.
+        </p>
+    </div> 
+    <div class="img1">
+        <img src="../img/fundoSimulador.jpg" alt="Imagem de Silos">
+    </div>
+    <div class="sobre-2">
+          <h2>Quais são os benefícios de um armazenamento correto dos grãos?</h2><br>
+          <p>Diminui as perdas quantitativas e qualitativas que ocorrem no campo pelo atraso na colheita, ou devidas ao armazenamento em locais inapropriados;
+            Reduz o gasto com transporte, que tem seu preço máximo no “pico de safra”, pois evita a espera dos caminhões nas filas das unidades coletoras ou intermediárias;
+            Contribui para o aumento do rendimento na colheita, por conta da eliminação das impurezas e do excesso de água;
+            Garante a qualidade do produto, evitando o processamento inadequado devido ao grande volume a ser processado no período da safra;
+            Aumenta o poder de barganha dos produtores, já que permite a escolha da época de comercialização.
+            Sendo assim, pode-se dizer que armazenar corretamente seu produto, aumentará seus ganhos, visto que o mesmo pode ser comercializado fora de sua ‘’época’’ (como citado acima).
+            </p>
+    </div>
+    <div class="divCor2"></div>
+    <div class="img2">
+        <img src="../img/silos1.jpg" alt="Imagem sobre Silos">
+    </div>
+        <div class="sobre-3">
+            <h2>Onde é feita a armazenagem de grãos?</h2><br>
+            <p>De modo geral, os grãos devem ser acomodados em locais com condições adequadas e cuidados necessários.
+                Sendo assim, uma fazenda deve ser composta por silos, os quais são destinados para armazenamento de grãos.
+                Entre as diferentes funções de silos, podemos encontrar os de espera, secador, armazenador e de expedição.
+                Silos são usados para o armazenamento adequado de grãos, preservando suas propriedades físicas e químicas, 
+                evitando ocorrer mudanças quantitativas e qualitativas bruscas. </p> 
+        </div>
+        <div class="img3">
+            <img src="../img/silos4.jpg" alt="Imagem sobre Silos">
+        </div>
+        <div class="Projeto" >
+            <div class="conteiner-Slç">
+                <h2>Solução</h2><br>
+                <p>
+                    Sendo assim, a solução mais plausível para haver o monitoramento correto são sensores, que captam a temperatura e umidade do silo e enviam para um sistema que é visto em tempo real pelo cliente, isso permite com que as informações climáticas do local sejam adquiridas com facilidade e lidas até por quem não tem conhecimento do assunto, assim favorecendo a manutenção do silo e a preservação do que está armazenado.  
+                </p>
+                <div class="divCor"></div>
+                <img src="../img/silos.jpg" alt="foto de um silo">
+            </div>
+        </div>
+</div> 
+</div>
+<!--  Calculadora de orçamento  -->
+<div class="Projeto" id="orçamento">
+    <div class="conteiner-orçamento">
+        <h2>Calcular Orçamento</h2><br>
+        <div class="card1">
+            <h3>Orçamento:</h3>
+           Insira a quantidade de silos: <br>
+           <input id="silo_qtd" type="text" class="insira" placeholder="Quantidade de silos"><br>
+           Insira o período de uso: <br>
+           <input id="mes_uso" type="text" class="insira" placeholder="Período de utilização"><br><br>
+           <button onclick="simular()" class="btn-Acessar">Simular orçamento</button><br>
+           <div id="Resultado"></div>
+           <div id="parcelamento" style="color: rgb(14, 3, 3); font-size: 18px"></div>
+           <div id="lucro" style="color: rgb(235, 6, 6); font-size: 18px; text-justify: auto"></div>
+        </div>
+        <div class="card2">
+            <div class="regra">
+                <h3>Regra de négocio:</h3>
+                O preço por silo é fixo 400R$. O preço por mês é de 1800R$, 
+                o preço do silo é somado com o mês, chegando no total.
+                Parcelamento disponível até 12x.
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Area de contato -->
+<div id="contato" class="contato-pagina2">
+    <div class="container">
+      <h2 class="titulo">Contate-nos</h2></div>
+      <div class="Pcontato">
+          <form>
+              <label for="nomeSobrenome">Nome:</label>
+              <input type="text" id="nomeSobrenome" placeholder="Nome completo" class="input_padronizado" required>
+
+              <label for="nomeEmpresa">Nome da Empresa:</label>
+              <input type="text" id="nomeEmpresa" placeholder="Nome Empresa" class="input_padronizado" required>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" class="input_padronizado" required placeholder="nome@email.com">
+
+              <label for="telefoneContato">Telefone:</label>
+              <input type="tel" id="telefoneContato" class="input_padronizado" required placeholder="Ex: (00) 00000-0000">
+
+              <label for="assunto">Assunto:</label>
+              <input type="text" id="assunto" maxlength="70" class="input_padronizado">
+
+              <label for="mensagem">Mensagem:</label>
+              <textarea type="text" id="mensagem" rows="9" oninput="digitar()" class="input_padronizado" maxlength="500" data-ls-module="charCounter"></textarea>
+             <br><b id="restantes">500</b> caracteres restantes
+              <div>
+                  <p><b>Como prefere o contato?</b></p>
+
+                  <label for="email-radio">
+                      <input type="radio" id="email-radio" name="contato" checked>Email
+                  </label>
+
+                  <label for="telefone-radio">
+                      <input type="radio" id="telefone-radio" name="contato">Telefone
+                  </label>
+              </div><br>
+              <button onclick="enviar_form()" class="btn-Acessar">Enviar</button>
+          </form>
+      </div>
+</div>
+<!-- Botão pra subir no topo -->
+<a href="#home">
+    <button id="subirTopo"> 
+  ^ <br> Subir
+    </button>
+</a>
+<!-- Rodapé -->
+<footer class="container-NasPaginas">
+       <div class="container-rodape">
+       <p><b>Endereço:</b> Rua Haddock Lobo, 595</p>
+       <p>Cerqueira César, São Paulo - SP</p>
+       <p>01414-001</p>
+       <p><b>Email:</b>Exemplor@gmail.com</p>
+        <p><b>Telefone:</b> (11) 2384-0732</p> 
+      </div>
+      <div class="rede-social">
+       <a href="facebook.com.br"><img src="../img/facebook.png" alt="Icone facebook"></a>
+       <a href="instagram.com.br"><img src="../img/instagram.png" alt="Icone instagram"></a>
+       <a href="github.com.br"><img src="../img/github-logo.png" alt="Icone github"></a>
+      </div>
+      <p>Copyright © 2020 | Isabela Vitoria | 7Solutions.</p>
+      </footer>
+</body>
+</html>
+<script> 
+    /* Calculadora de orçamento */
+      function simular(){
+          var silo = Number(silo_qtd.value * 400);
+          var meses = Number(mes_uso.value * 1800);
+          var taxa_ass = Number(silo + meses);
+    
+          Resultado.innerHTML = `<span style="color: red; font-size: 18px"><u>Total R$: ${taxa_ass.toFixed(2)}</u><br></span>
+              <span style="font-size: 18px">Parcelamento até 12x:</span>`;
+    
+          // Parcelamento em 12x, de uma forma mais simplificada
+          parcelamento.innerHTML = `
+          1x sem juros R$:${Number(taxa_ass / 1).toFixed(2)}<br>
+          2x sem juros R$:${Number(taxa_ass / 2).toFixed(2)}<br>
+          3x sem juros R$:${Number(taxa_ass / 3).toFixed(2)}<br>
+          4x sem juros R$:${Number(taxa_ass / 4).toFixed(2)}<br>
+          5x sem juros R$:${Number(taxa_ass / 5).toFixed(2)}<br>
+          6x sem juros R$:${Number(taxa_ass / 6).toFixed(2)}<br>
+          7x sem juros R$:${Number(taxa_ass / 7).toFixed(2)}<br>
+          8x sem juros R$:${Number(taxa_ass / 8).toFixed(2)}<br>
+          9x sem juros R$:${Number(taxa_ass / 9).toFixed(2)}<br>
+          10x sem juros R$:${Number(taxa_ass / 10).toFixed(2)}<br>
+          11x sem juros R$:${Number(taxa_ass / 11).toFixed(2)}<br>
+          12x sem juros R$:${Number(taxa_ass / 12).toFixed(2)}<br><br>`;
+    
+          lucro.innerHTML = `<b style="text-align: center">Contratando nossos serviços garantimos 5% de lucro em cima do valor de 1 tolenada de grãos, oferencendo maior qualidade no seu produto.<br>
+          E ter a melhor qualidade do grão!<b>`;
+          
+          // for (var parcela = 1; parcela <= 12; parcela++) {
+          //     parcelamento.innerHTML += `${parcela}x sem juros R$: ${Number(taxa_ass / parcela).toFixed(2)}<br>`;
+          // }
+      }
+  /* Validação do formulario */    
+function enviar_form(){
+    let erros = [];
+    if (!nomeSobrenome.value) {
+        erros.push("Preencha o nome");
+    }
+    if (!nomeEmpresa.value) {
+        erros.push("Preencha o nome da empresa");
+    }
+    if (!assunto.value) {
+        erros.push("Preencha o assunto");
+    }
+    if ((email.value.search("@") == -1) ||
+       (email.value.search(".") == -1) ||
+       (email.value.search(" ") >= 1)) {
+          erros.push("Formato de E-mail inválido")   
+    }
+    if (!mensagem.value) {
+        erros.push("Preencha o campo de mensagem");
+    }
+    return erros;
+    alert("sua mensagem foi enviada");
+}
+/* Contagem de palavras do formulario */
+function digitar() {
+    let quantidade = mensagem.value.length;
+    let restante = 500 - quantidade;
+    restantes.innerHTML = restante;
+}
+    </script>
