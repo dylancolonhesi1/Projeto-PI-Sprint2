@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>7 Solutions</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo da empresa">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#inicio">INÍCIO</a></li>
+                    <li><a href="#sobre">SOBRE NÓS</a></li>
+                    <li><a href="#equipe">EQUIPE</a></li>
+                    <!-- <li><a href="#">NOSSA SOLUÇÃO</a></li> -->
+                    <li><a href="#orcamento">ORÇAMENTO</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                </ul>
+            </div>            
+        </div>
+    </header>
+
+    <div class="inicio" id="inicio">
+        <div class="content">
+            <div class="texto-inicio">
+                <p class="slogan">Aqui vai o slogan da empresa.</p>
+                <button class="btn-amarelo" onclick="location.href='#sobre'">Saiba mais</button>
+                <button class="btn-azul" onclick="location.href='#orcamento'">Faça um orçamento</button>
+            </div>
+        </div>
+        <a href="#sobre"><img src="img/mouse.png" alt="Clique para rolar a página"></a>
+    </div>
+
+    <div class="sobre" id="sobre">
+        <div class="content">
+            <img src="img/nome-empresa.jpg" alt="Nome da empresa">
+            <div class="direita">
+                <br><br><br><br><br>
+                <p class="titulo">Quem somos nós?</p>
+                <br><br>
+                <div class="texto-sobre">
+                    <p>Lorem ipsum adipiscing a malesuada dictum, aliquam sociosqu curabitur felis, 
+                        consequat ultrices fusce praesent. dictum ipsum luctus semper laoreet venenatis cubilia,
+                         cursus eros fermentum ad bibendum massa placerat, nunc ultrices interdum phasellus lorem. 
+                         arcu lectus in sit proin nec purus aptent mollis blandit, litora quisque accumsan eros 
+                         scelerisque inceptos odio vehicula condimentum urna, sem turpis purus vivamus quis 
+                         venenatis tellus euismod. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="equipe" id="equipe">
+        <div class="content">
+            <div class="item">
+                <img src="img/dylan.jpg" alt="">
+                <p>Dylan Colonhesi</p>
+            </div>
+            <div class="item">
+                <img src="img/isabela.png" alt="">
+                <p>Isabella Vitória</p>
+            </div>
+            <div class="item">
+                <img src="img/kling.jpg" alt="">
+                <p>Felipe Kling</p>
+            </div>
+            <br>
+            <div class="item">
+                <img src="img/leonardo.jpg" alt="">
+                <p>Leonardo Sanchez</p>
+            </div>
+            <div class="item">
+                <img src="img/tabata.jpg" alt="">
+                <p>Tabata Fernanda</p>
+            </div>
+            <div class="item">
+                <img src="img/buso.jpg" alt="">
+                <p>Thalles Buso</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="orcamento" id="orcamento">
+        <div class="calculadora">
+            <p class="calc-valor">Calcular valor</p>
+            <input type="text" id="qtdSilos" placeholder="Digite a quantidade de silos">
+            <input type="text" id="utilizacao" placeholder="Digite o período de utilização">
+            <br><br>
+            <button onclick="calcular()">Calcular</button>
+            <br><br>
+            <div class="resposta">
+                <p id="tot"></p> 
+
+            </div>
+        </div>
+        <div class="direita">
+            <div class="txt-orcamento">
+                <span>Como funciona?</span>
+                <br><br>
+                <p>Lorem ipsum adipiscing a malesuada dictum, aliquam sociosqu curabitur felis, 
+                    consequat ultrices fusce praesent. dictum ipsum luctus semper laoreet venenatis cubilia,
+                     cursus eros fermentum ad bibendum massa placerat, nunc ultrices interdum phasellus lorem. 
+                     arcu lectus in sit proin nec purus aptent mollis blandit. Lorem ipsum adipiscing a malesuada dictum, aliquam sociosqu curabitur felis, 
+                        consequat ultrices fusce praesent. dictum ipsum luctus semper laoreet venenatis cubilia,
+                         cursus eros fermentum ad bibendum massa placerat, nunc ultrices interdum phasellus lorem. 
+                         arcu lectus in sit proin nec purus aptent mollis blandit.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contato" id="contato">
+        <div class="esquerda">
+            <div class="info">
+                <p><b>Endereço:</b> Rua Haddock Lobo, 595 - Cerqueira César, São Paulo - SP, 01414-001</p>
+                <br>
+                <p><b>Email:</b> sevensolutions@gmail.com</p>
+                <br>
+                <p><b>Telefone:</b> (11) 4002-8922</p>
+                <br><br><br>
+                <a href="#contato"><img src="img/whatsapp.png" alt=""></a>
+                <a href="#contato"><img src="img/linkedin.png" alt=""></a>
+            </div>
+        </div>
+        <div class="form">
+            <form action="#contato">
+                <input type="text" placeholder="Nome">
+                <input type="text" placeholder="e-mail">
+                <input type="text" placeholder="Assunto">
+                <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Digite a sua mensagem aqui!"></textarea>
+                <button class="btn-azul">Enviar</button>
+            </form>
+            <br><br>
+            <p>© Copyright 2020 | Todos os direitos reservados </p>
+        </div>
+    </div>
+
+    <script>
+        function calcular(){
+            var silo = Number(qtdSilos.value);
+            var periodo = Number(utilizacao.value);
+            var totalAproximado = (silo * 400.0) + (periodo * 1800.0);
+            var economia = 50000
+            tot.innerHTML = `O valor aproximado para a implementação e manutenção 
+                            do sistema é de R$${totalAproximado.toFixed(2)}. Com isso, você 
+                            pode economizar até R$${economia.toFixed(2)} num período de 6 meses. <br><br>
+                            <p><b>*O valor calculado é estimado de acordo com a nossa regra de 
+                            negócio. Caso queira mais informações, sugerimos
+                            entrar em contato conosco via e-mail ou telefone.</b></p>`;
+        }
+    </script>
+
+</body>
+</html>
