@@ -5,7 +5,6 @@ create table Empresa(
     nome varchar(30),
     emailEmpresa varchar(30),
     inscricaoEstadual char(9),
-    nomeResponsavel varchar(50),
     estado varchar(30),
     cidade varchar(30),
     bairro varchar(30),
@@ -27,10 +26,10 @@ create table Silo(
     fkCliente int,
     foreign key(fkCliente) references Empresa(cnpj)
 );
-create table registro(
+create table Registro(
 idRegistro int primary key auto_increment,
 registro int,
-dataregistro datetime,
+dataRegistro datetime,
 fkSilo int,
 foreign key (FkSilo) references Silo (idSilo)
 );
