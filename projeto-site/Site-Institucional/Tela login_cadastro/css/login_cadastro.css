@@ -16,7 +16,7 @@ p, span{
 header {
     width: 100%;
     height: 74px;
-    background-color: #720900;
+    background-color:black;
     padding-top: 7px;
     border-bottom: yellow 5px solid;
     position: fixed;
@@ -26,6 +26,7 @@ header a{
     color: whitesmoke;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
+    
 }
 
 
@@ -34,6 +35,7 @@ header a{
     width: 93%;
     height: 60px;
     margin: auto;
+    
 }
 
 .logo img{
