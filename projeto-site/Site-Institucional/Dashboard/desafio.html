@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="barra1" style="background-color: red;width: 100%;height: 20px;margin-top: 50px"></div>
+    <div id="barra2" style="background-color: blue;width: 100%;height: 20px; margin-top: 30px"></div>
+
+    <br>
+
+    <button onclick="porrada()">Porrada aleatoria</button>
+</body>
+
+</html>
+<script>
+    var quantidade = 0
+    var vida1 = 100;
+    var vida2 = 100;
+    var acabou = 0
+    function porrada() {
+        quantidade++
+        var golpe = (Math.random() * 20).toFixed(1);
+        var lutador1 = vida1 - golpe;
+        var lutador2 = vida2 - golpe;
+        var lutador = Math.trunc((Math.random() * 2) + 1);
+        var calculo = quantidade % 5;
+
+        if (lutador == 1) {
+            barra1.style.width = `${lutador1}%`
+            vida1 = lutador1
+        }
+        else if (lutador == 2) {
+            barra2.style.width = `${lutador2}%`
+            vida2 = lutador2
+        }
+        if (calculo == 0) {
+            if (lutador1 > lutador2) {
+                (alert('Lutador Vermelho está vencendo'))
+            }
+            else if (lutador2 > lutador1) {
+                (alert('Lutador Azul está vencendo'))
+            }
+        }
+        if (vida1 <= 0) {
+                barra1.style.width = '100%';
+                barra2.style.width = '100%';
+                quantidade = 0
+                alert('Lutador Azul Venceu')
+        }
+        else if (vida2 <= 0) {
+                barra1.style.width = '100%';
+                barra2.style.width = '100%';
+                quantidade = 0
+                alert('Lutador Vermelho Venceu')
+            }
+    }
+</script>
