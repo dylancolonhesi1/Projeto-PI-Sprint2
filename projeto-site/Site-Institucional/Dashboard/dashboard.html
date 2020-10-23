@@ -107,7 +107,8 @@
                         //type: 'value',
                         distribution: 'series',
                         ticks: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            maxticksLimit: 5
                         }
                     }],
                     yAxes: [{
@@ -116,7 +117,9 @@
                             labelString: 'Temperature'
                         },
                         ticks: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            suggestedMin: 0,
+							suggestedMax: 50
                         }
                     }]
                 },
@@ -189,7 +192,9 @@
                         //type: 'value',
                         distribution: 'series',
                         ticks: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            suggestedMin: 0,
+							suggestedMax: 40
                         }
                     }],
                     yAxes: [{
@@ -198,7 +203,9 @@
                             labelString: 'Humidity'
                         },
                         ticks: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            suggestedMin: 0,
+							suggestedMax: 25
                         }
                     }]
                 },
