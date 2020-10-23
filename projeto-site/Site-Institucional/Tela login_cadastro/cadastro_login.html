@@ -36,18 +36,20 @@
         </div>
 
         <div class="card1">
+            <form action="">
             <br>
             <span>Insira seu nome:</span>
-            <input id="nome1" type="text" class="insira" placeholder="Seu nome"><br>
+            <input id="nome1" type="text" class="insira" placeholder="Seu nome" required><br>
             <br>
             <span>Insira seu email: </span>
-            <input id="email2" type="text" class="insira" placeholder="exemplo@gmail.com.br"><br>
+            <input id="email2" type="email" class="insira" placeholder="exemplo@gmail.com.br" required><br>
             <br>
             <span>Insira sua senha:</span>
-            <input id="senha3" type="text" class="insira" placeholder="@123sS"><br>
+            <input id="senha3" type="password" class="insira" placeholder="@123sS" required><br>
             <br>
-            <button onclick="cadastrar()" class="botao">Cadastrar</button><br>
+            <button  class="botao">Cadastrar</button><br>
             <br>
+        </form>
             
             <span>Já possuí cadastro?</span><br>
             <br>
@@ -81,19 +83,19 @@
   
   
   
-  function cadastrar () {
-    if (nome1.value == 0) {
-        alert ("Insira seu nome"); 
-        } else if (email2.value == 0) {
-            alert ("Insira seu email"); 
+//   function cadastrar () {
+//     if (nome1.value == 0) {
+//         // alert ("Insira seu nome"); 
+//         } else if (email2.value == 0) {
+//             // alert ("Insira seu email"); 
 
-        } else if (senha3.value == 0) {
-            alert ("Insira sua senha");
+//         } else if (senha3.value == 0) {
+//             // alert ("Insira sua senha");
 
-        } else {
-        alert ("Cadastro realizado com sucesso");                     
-                }               
-        }  
+//         } else {
+//         // alert ("Cadastro realizado com sucesso");                     
+//                 }               
+//         }  
 
 
   
