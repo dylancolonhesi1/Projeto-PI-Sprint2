@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>7 Solutions</title>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -21,7 +23,7 @@
                     <li><a href="#orcamento">ORÇAMENTO</a></li>
                     <li><a href="#contato">CONTATO</a></li>
                 </ul>
-            </div>            
+            </div>
         </div>
     </header>
 
@@ -44,17 +46,17 @@
                 <p class="titulo">Quem somos nós?</p>
                 <br><br>
                 <div class="texto-sobre">
-                    <p>Lorem ipsum adipiscing a malesuada dictum, aliquam sociosqu curabitur felis, 
+                    <p>Lorem ipsum adipiscing a malesuada dictum, aliquam sociosqu curabitur felis,
                         consequat ultrices fusce praesent. dictum ipsum luctus semper laoreet venenatis cubilia,
-                         cursus eros fermentum ad bibendum massa placerat, nunc ultrices interdum phasellus lorem. 
-                         arcu lectus in sit proin nec purus aptent mollis blandit, litora quisque accumsan eros 
-                         scelerisque inceptos odio vehicula condimentum urna, sem turpis purus vivamus quis 
-                         venenatis tellus euismod. </p>
+                        cursus eros fermentum ad bibendum massa placerat, nunc ultrices interdum phasellus lorem.
+                        arcu lectus in sit proin nec purus aptent mollis blandit, litora quisque accumsan eros
+                        scelerisque inceptos odio vehicula condimentum urna, sem turpis purus vivamus quis
+                        venenatis tellus euismod. </p>
                 </div>
             </div>
         </div>
     </div>
-  
+
     <div class="equipe" id="equipe">
         <div class="content">
             <div class="item">
@@ -88,13 +90,12 @@
     <div class="orcamento" id="orcamento">
         <div class="calculadora">
             <p class="calc-valor">Calcular valor</p>
-            <input type="text" id="qtdSilos" placeholder="Digite a quantidade de silos">
-            <input type="text" id="utilizacao" placeholder="Digite o período de utilização">
+            <input type="text" id="qtdProd" placeholder="Digite a quantidade de silos">
             <br><br>
             <button onclick="calcular()">Calcular</button>
             <br><br>
             <div class="resposta">
-                <p id="tot"></p> 
+                <p id="tot"></p>
 
             </div>
         </div>
@@ -102,13 +103,10 @@
             <div class="txt-orcamento">
                 <span>Como funciona?</span>
                 <br><br>
-                <p>Lorem ipsum adipiscing a malesuada dictum, aliquam sociosqu curabitur felis, 
-                    consequat ultrices fusce praesent. dictum ipsum luctus semper laoreet venenatis cubilia,
-                     cursus eros fermentum ad bibendum massa placerat, nunc ultrices interdum phasellus lorem. 
-                     arcu lectus in sit proin nec purus aptent mollis blandit. Lorem ipsum adipiscing a malesuada dictum, aliquam sociosqu curabitur felis, 
-                        consequat ultrices fusce praesent. dictum ipsum luctus semper laoreet venenatis cubilia,
-                         cursus eros fermentum ad bibendum massa placerat, nunc ultrices interdum phasellus lorem. 
-                         arcu lectus in sit proin nec purus aptent mollis blandit.</p>
+                <p>Estudos demonstram que sem acompanhamento e devido cuidado da temperatura e umidade de um Silo
+                    é possível perder até 15% de sua produção total. Para conseguir vizualizar quanto isso seria em prática monetária
+                    , apenas insira a quantidade em toneladas que são produzidas por silo em sua empresa. Se surpreendeu com o quanto pode ser salvo com nossa tecnologia? <br>
+                    Entre em contato conosco através desse site que analisaremos sua situação com cuidado e será realizado um orçamento para nossos serviços.</p>
             </div>
         </div>
     </div>
@@ -140,19 +138,21 @@
     </div>
 
     <script>
-        function calcular(){
-            var silo = Number(qtdSilos.value);
-            var periodo = Number(utilizacao.value);
-            var totalAproximado = (silo * 400.0) + (periodo * 1800.0);
-            var economia = 50000
-            tot.innerHTML = `O valor aproximado para a implementação e manutenção 
-                            do sistema é de R$${totalAproximado.toFixed(2)}. Com isso, você 
-                            pode economizar até R$${economia.toFixed(2)} num período de 6 meses. <br><br>
-                            <p><b>*O valor calculado é estimado de acordo com a nossa regra de 
-                            negócio. Caso queira mais informações, sugerimos
-                            entrar em contato conosco via e-mail ou telefone.</b></p>`;
+        function calcular() {
+            var grao = Number(qtdProd.value);
+            var saca = 164.50
+            var precoTon = saca * 16.67
+            var totalAproximado = precoTon * grao;
+            var perda = totalAproximado * 0.15
+            var semTec = totalAproximado * 0.85
+            tot.innerHTML = `Com sua produção atual de ${grao.toFixed(2)} toneladas 
+                            por Silo é provável ocorrer uma perda de até R$ ${perda.toFixed(2)}, 
+                            porém com nossa tecnologia em uma safra que seria lucrado 
+                            R$ ${semTec.toFixed(2)} é possível obter um lucro maior que pode chegar até 
+                            R$ ${totalAproximado.toFixed(2)}.</b></p>`;
         }
     </script>
 
 </body>
+
 </html>
