@@ -70,6 +70,16 @@ header a{
     padding: 20px 10px;
 }
 
+.nav ul li .btn-entrar {
+    width: 100px;
+    height: 20px;
+    background-color: #FFDE59;
+    color: black;
+    font-weight: bold;
+    padding: 5px 16px 7px 16px;
+    border-radius: 2px;
+}
+
 /* INICIO */
 .inicio{
     width: 100%;
