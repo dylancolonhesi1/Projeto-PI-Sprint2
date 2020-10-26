@@ -1,0 +1,65 @@
+
+.card1{
+    float: left;
+    margin-left: 20%;
+    text-align: center;
+    /*padding-left: 15px;*/
+    padding-top: 20px;
+    padding-bottom: 50px;
+    width: 60%;
+    font-size: 25px;
+    height: auto;
+    margin-top: 40px;
+    color: white;
+    background: #39170e;
+
+    box-shadow: 0px 0px 1em #666;
+    -webkit-box-shadow: 0px 0px 1em #666;
+    -moz-box-shadow: 0px 0px 1em #666;
+}
+.card2{
+    float: left;
+    margin-left: 20%;
+    text-align: center;
+    /*padding-left: 15px;*/
+    padding-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-justify: auto;
+    width: 60%;
+    font-size: 21px;
+    height: 210px;
+    margin-top: 50px;
+    color: white;
+    background: #39170e;
+
+}
+
+.conteiner-orçamento {
+    width: 70%;
+    margin: auto;
+    height: 750px;
+    text-align: center;
+    padding-top: 55px;
+    font-size: 20px;
+}
+.insira{
+    padding: 5px;
+    border: none;
+    border-bottom: #ffde59 solid 2px;
+    width: 250px;
+}
+.insira:focus{
+    padding: 9px;
+    background-color: #39170e;
+    color: wheat;
+}
+.regra{
+    width: 80%;
+    margin-left: 10%;
+    text-align: justify;
+    background-color: #39170e;
+    color: white;
+}
+.regra h3{
+    text-align: center;
+}

@@ -1,0 +1,179 @@
+body{
+   font-family: Arial, Helvetica, sans-serif;
+      margin: 0px;
+      padding: 0px; 
+   }
+
+
+   .container {
+    width: 80%;
+    margin: auto; 
+
+    height: 50px; }
+     
+
+.header .nav .menu_atual a,
+ .header span {
+    color: green;
+  }
+      
+      
+      .header{
+       background-color: #06296d;
+      height: 80px;
+      padding-top: 30px;
+      border-bottom: black solid 5px;
+      
+      }
+     
+  
+
+   .title-header h1, 
+   .nav ul {
+       margin: 0;
+   
+   }
+
+   
+   
+   
+   .title-header {
+    float: left;
+    color: white;
+
+   }
+
+   
+   
+
+
+   .nav {
+   float: right;
+
+
+
+   }
+
+   .nav a {
+     text-decoration: none;
+     color: #ffffff;
+     text-transform: uppercase;
+     
+
+   }
+
+   .nav li {
+    display: inline-block ;
+    padding: 20px;
+    
+    
+    
+   }
+
+   .showcase{
+      background-image: url(showcase3.png) ;
+      background-size: cover;
+      color: whitesmoke;
+      text-align: center;
+      min-height: 350px;
+      border-bottom: black solid 5px;
+ 
+     }
+ 
+     .showcase h1 {
+       margin: 0;
+       font-size: 55px;
+       padding-top: 100px;
+       
+ 
+     }
+     .showcase h1 {
+      font-family: Helvetica;
+      color: #FFF;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+      
+
+    }
+     .showcase p {
+      font-size: 30px;
+       
+ 
+     }
+     .showcase p {
+      font-family: Helvetica;
+      color: #FFF;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+      
+
+    }
+
+    .showcase1{
+      background-color:#06296d;
+      background-size: cover;
+      color: whitesmoke;
+      border-bottom: black solid 5px;
+      
+      min-height: 100px;
+ 
+     }
+ 
+ 
+     .showcase1 h1 {
+       margin: 0;
+       font-size: 55px;
+       padding-top: 100px;
+       text-align: center;
+       padding-top: 17px;
+       
+ 
+     }
+     .showcase1 h1 {
+      font-family: Helvetica;
+      color: #FFF;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+      
+
+    }
+
+    .showcase1 p {
+      font-size: 30px;
+      text-align: center;
+       
+ 
+     }
+     .showcase1 p {
+      font-family: Helvetica;
+      color: #FFF;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+     
+    
+
+     }
+     
+     .footer {
+    margin-right: -126px;
+    padding: 21px;
+    margin-top: 10px;
+    color: #ffffff;
+    background-color:#06296d;
+    text-align: center;
+    margin-left: -131px;
+    border-bottom: black solid 6px;
+    border-top: black solid 6px;
+ }
+
+  .footer h4 {
+
+   text-align: center;
+   font-size: 15px;
+   
+
+  }
+
+
+
+  

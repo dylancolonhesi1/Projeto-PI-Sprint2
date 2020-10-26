@@ -1,0 +1,152 @@
+body{
+    background-image: url(contato.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+      margin: 0px;
+      padding: 0px;
+ }
+ 
+ 
+    .container {
+     width: 80%;
+     margin: auto; 
+ 
+     height: 50px; }
+      
+ 
+ .header .nav .menu_atual a,
+  .header span {
+     color: green;
+   }
+       
+       
+       .header{
+        background-color: #06296d;
+       height: 80px;
+       padding-top: 30px;
+       border-bottom: black solid 5px;
+       
+       }
+      
+   
+ 
+    .title-header h1, 
+    .nav ul {
+        margin: 0;
+    
+    }
+ 
+    
+    
+    
+    .title-header {
+     float: left;
+     color: white;
+ 
+    }
+ 
+    
+    
+ 
+ 
+    .nav {
+    float: right;
+ 
+ 
+ 
+    }
+ 
+    .nav a {
+      text-decoration: none;
+      color: #ffffff;
+      text-transform: uppercase;
+      
+ 
+    }
+ 
+    .nav li {
+     display: inline-block ;
+     padding: 20px;
+     
+     
+     
+    }
+
+
+    .compreagora{
+        width: 100%;
+        float: left;
+    }
+    .header5{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 28px;
+        color:black;
+        float: left;
+        text-align: justify;
+        width: 30%;
+        margin-left: 27%;
+        
+    }
+ 
+
+
+   
+
+    .botao{
+        padding: 7px;
+        font: bold;
+        text-transform: uppercase;
+        background-color: #c8e950;
+        
+        
+    }
+
+
+
+
+
+    .card2{
+        float: left;
+        margin-left: 1%;
+        text-align: center;
+        /*padding-left: 15px;*/
+        padding-top: 20px;
+        padding-bottom: 50px;
+        width: 60%;
+        font-size: 20px;
+        height: auto;
+        margin-top: -17px;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.74);
+    }
+
+    .insira{
+        padding: 5px;
+        background-color: #60aee2;
+        
+        
+    }
+
+    .botao{
+        padding: 7px;
+        font: bold;
+        text-transform: uppercase;
+        background-color: #60aee2;
+        margin-left: center;
+        width: 115px;
+        
+        
+    }
+    h3 {
+        display: block;
+        font-size: 1.17em;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        margin-left: center;
+    }
